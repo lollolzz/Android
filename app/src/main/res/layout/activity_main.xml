@@ -7,50 +7,89 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv_random"
+        android:id="@+id/tv_pepole"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0.00"
-        android:textSize="96sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="참가자1"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_timer2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.169" />
+        app:layout_constraintVertical_bias="0.699" />
 
     <TextView
-        android:id="@+id/tv_timer"
+        android:id="@+id/tv_random2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0.00"
-        android:textSize="96sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="목표"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_random"
+        app:layout_constraintEnd_toEndOf="@+id/tv_random"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toStartOf="@+id/tv_random"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48" />
+        app:layout_constraintVertical_bias="0.884" />
 
     <Button
         android:id="@+id/btn_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="시작/정지"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_random"
-        app:layout_constraintVertical_bias="0.739" />
+        app:layout_constraintVertical_bias="0.6" />
+
+    <TextView
+        android:id="@+id/tv_random"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457" />
+
+    <TextView
+        android:id="@+id/tv_timer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="현재"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_timer"
+        app:layout_constraintEnd_toEndOf="@+id/tv_timer"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/tv_timer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.884" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_random"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457" />
 
     <TextView
         android:id="@+id/tv_point"
-        android:layout_width="53dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="8dp"
-        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_main"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_timer" />
 
