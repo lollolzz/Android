@@ -1,9 +1,11 @@
 package com.chobo.practice
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import java.lang.Math.abs
 import java.util.*
 
@@ -64,7 +66,15 @@ class MainActivity : AppCompatActivity() {
         val btn_i: Button = findViewById(R.id.btn_i)
         val random_box = Random()
         val num = random_box.nextInt(1001) //11로 하면 0-10사이의 숫자가 도출된다.
+        val bg_main : ConstraintLayout = findViewById(R.id.bg_main)
+        val color_list = mutableListOf<String>("#32E9321E", "#32E98E1E", "#32E9C41E", "#3287E91E", "#321EBDE9", "#321E79E9", "#32651EE9")
+        var color_index = k%7-1
+        if (color_index == -1){
+            color_index =6
+        }
+        val color_sel = color_list.get(color_index)
 
+        bg_main.setBackgroundColor(Color.parseColor(color_sel))
         tv.text = ((num.toFloat())/100).toString()// num.toFloat()을 하는 이유는 num이 Int형이기 때문
         // 숫자를 문자형으로 변환시켜주는 것이 float이다.
         btn.text = "시작"
